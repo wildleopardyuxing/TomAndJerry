@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>猫鼠游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="join-game">
+            <img id="wallpaper" src="./img/wallpaper.png">
+            <input type="text" id="serverIp" placeholder="输入服务器IP地址">
+            <div id="join-button">
+                <button id="joinButton">加入</button>
+            </div>
+            <div id="other-buttons" style="display: none;">
+                <button id="startButton" disabled>开始</button>
+                <button id="exitButton">退出</button>
+            </div>
+        </div>
+        <div id="player-list"></div>
+        <div id="game-ui" style="display: none;">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            <img id="cat-bg" src="./img/cat_bg.png">
+            <img id="mouse-bg" src="./img/mouse_bg.png">
+            <div id="game-status">
+                <span id="timer"></span>
+                <div id="scoreboard"></div>
+            </div>
+            <div id="game-over" style="display: none;">
+                <h1><span id="winner"></span>团队获胜!</h1>
+                <div>
+                    <button id="gameOverExitButton">退出</button>
+                    <button id="gameOverRestartButton">重新开始</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #50a5f5;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#serverIp {
+    height: 17px;
+    padding: 5px;
+}
+
+#join-game {
+    width: 370px;
+    text-align: right;
+    position: relative;
+}
+
+#wallpaper {
+    position: absolute;
+    width: 800px;
+    top: -260px;
+    left: -220px;
+    z-index: -1;
+}
+
+#join-button, #other-buttons {
+    width: 150px;
+    display: inline-block;
+    text-align: left;
+}
+
+#waiting-area {
+    margin-top: 20px;
+}
+
+#player-list {
+    margin: 10px 0 0 20px;
+    height: 200px;
+    width: 260px;
+    overflow-y: auto;
+    border-top: 1px solid #ccc;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#player-list div {
+    margin-bottom: 5px;
+}
+
+#player-list .header {
+    position: sticky;
+    top: 0px;
+    padding: 5px;
+    background-color: #50a5f5;
+}
+
+button {
+    height: 30px;
+    padding: 1px 10px;
+}
+
+#game-ui {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#game-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+#timer {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#scoreboard {
+    padding: 0 20px;
+    height: 410px;
+    overflow-y: auto;
+}
+
+#scoreboard table {
+    border-collapse: collapse;
+}
+
+#scoreboard table.self {
+    border-bottom: 3px solid #fff;
+    margin-bottom: 5px;
+    position: sticky;
+    top: 0px;
+    background-color: #50a5f5;
+}
+
+#scoreboard table.all tr.gold {
+    background-color: gold;
+}
+
+#scoreboard table.all tr.silver {
+    background-color: silver;
+}
+
+#scoreboard table.all tr.bronze {
+    background-color: #cd7f32;
+}
+
+#scoreboard table th, #scoreboard table td {
+    padding: 5px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+#scoreboard table td.ip, #scoreboard table td.score {
+    width: 120px;
+    min-width: 120px;
+}
+
+#scoreboard table td.rank {
+    width: 40px;
+    min-width: 40px;
+}
+
+#gameCanvas {
+    border: 1px solid black;
+    background-color: #fff;
+    box-shadow: 5px 5px rgba(0, 0, 0, .2);
+}
+
+#cat-bg {
+    width: 25%;
+    position: absolute;
+    top: -110px;
+    left: -142px 
+}
+
+#mouse-bg {
+    width: 15%;
+    position: absolute;
+    bottom: 0px;
+    right: 50px;
+}
+
+#game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    width: 300px;
+    height: 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px rgba(0, 0, 0, .2);
+}
